@@ -2,6 +2,7 @@
 //Styles imported from index.css
 import SkillDisplay from './SkillDisplay.js' //Skills Section
 import ExperienceDisplay from './ExperienceDisplay.js' //Experience Display
+import UniversityDisplay from './UniversityDisplay.js'
 //Creating a Personal Information Section
 function BriefBiography() {
   return (
@@ -37,17 +38,31 @@ const Skills =[
     proficiency: " 10 out of 10"
   }
 ]
-// Create a an Experience Section
+// Create an Experience Section
 const tenure = [
   {
-    company: "Publix SuperMarkets",
+    company: "Publix SuperMarkets:",
     title: "Customer Service Staff",
     duration: "March 2021 - Present"
   },
   {
-    company: "Publix SuperMarkets",
+    company: "Publix SuperMarkets:",
     title: "Cashier",
     duration: "July 2019 - March 2021"
+  }
+]
+// create an Education Section
+const education = [
+  {
+    college: "University of South Florida:",
+    degree: "Bachelors of Science in Business Analytics and Information Systems",
+    degree: "Bachelors of Science in Management",
+    years: "March 2023 - December 2025"
+  },
+  {
+    college: "Saint Petersburg College:",
+    degree: "A.A.",
+    years: "August 2019 - December 2022"
   }
 ]
 export default function Resume() {
@@ -66,6 +81,8 @@ export default function Resume() {
     <ul><SkillDisplay Skills={Skills}/></ul>
     <h3>Experience</h3>
     <ExperienceDisplay tenure={tenure}/>
+    <h3>Education</h3>
+    <UniversityDisplay education={education}/>
     </>
     )
 }
