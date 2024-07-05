@@ -1,9 +1,11 @@
 //U6899-7808
-import SkillDisplay from './SkillDisplay.js'
+//Styles imported from index.css
+import SkillDisplay from './SkillDisplay.js' //Skills Section
+import ExperienceDisplay from './ExperienceDisplay.js' //Experience Display
 //Creating a Personal Information Section
 function BriefBiography() {
   return (
-  <p style={{textIndent: 15}}>
+  <p style={{textIndent: 15, textAlign: "center"}}>
   Hello my name is Max Handelsman I am a dedicated student at the University of South Florida and a diligent 
   worker at Publix SuperMarkets. 
   <br/>I have worked at the company since I was sixteen years old and have grown in an ever changing world.
@@ -20,19 +22,32 @@ function BriefBiography() {
 const Skills =[
   {
     name: "HTML",
-    proficiency: " 5 of 10",
+    proficiency: " 5 out of 10",
   },
   { 
     name: "JS",
-    proficiency: " 5 of 10"
+    proficiency: " 5 out of 10"
   },
   {
     name: "Leadership",
-    proficiency: " 8 of 10"
+    proficiency: " 8 out of 10"
   },
   {
     name: "Communication",
-    proficiency: " 10 of 10"
+    proficiency: " 10 out of 10"
+  }
+]
+// Create a an Experience Section
+const tenure = [
+  {
+    company: "Publix SuperMarkets",
+    title: "Customer Service Staff",
+    duration: "March 2021 - Present"
+  },
+  {
+    company: "Publix SuperMarkets",
+    title: "Cashier",
+    duration: "July 2019 - March 2021"
   }
 ]
 export default function Resume() {
@@ -49,6 +64,8 @@ export default function Resume() {
     <BriefBiography />
     <h3>Skills</h3>
     <ul><SkillDisplay Skills={Skills}/></ul>
+    <h3>Experience</h3>
+    <ExperienceDisplay tenure={tenure}/>
     </>
     )
 }
